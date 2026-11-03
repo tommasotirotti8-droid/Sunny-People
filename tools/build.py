@@ -98,6 +98,7 @@ PAGES = [
     ("index.html", "/", "home", True, "1.0"),
     ("merch.html", "/merch.html", "merch", True, "0.8"),
     ("event.html", "/event.html", "events", True, "0.9"),
+    ("collab.html", "/collab.html", "collab", True, "0.7"),
     ("privacy.html", "/privacy.html", None, True, "0.3"),
     ("404.html", "/404.html", None, False, "0.0"),
 ]
