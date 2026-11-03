@@ -435,9 +435,8 @@ FOLLOW US
 
 
 <!-- AVVISAMI PER PRIMO
-     I contatti finiscono nel Google Sheet collegato.
-     Incolla l'URL della Web App di Apps Script in data-endpoint
-     (istruzioni in tools/avvisami-google-sheet.gs). -->
+     I contatti arrivano in Netlify Forms (modulo "avvisami")
+     e per email, se la notifica e' attiva nel pannello Netlify. -->
 
 <section class="event-notify" id="notify">
 
@@ -459,7 +458,10 @@ and when the presale opens.
 
 </div>
 
-<form class="notify-form" id="notify-form" data-endpoint="" novalidate>
+<form class="notify-form" id="notify-form" name="avvisami" method="POST" action="/event.html#notify"
+data-netlify="true" netlify-honeypot="website" novalidate>
+
+<input type="hidden" name="form-name" value="avvisami">
 
 <label for="nf-name">Name</label>
 <input id="nf-name" name="nome" type="text" autocomplete="given-name" required maxlength="60">

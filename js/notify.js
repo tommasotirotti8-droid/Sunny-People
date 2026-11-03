@@ -1,6 +1,5 @@
 /* SUNNY PEOPLE - modulo "Avvisami per primo" (event.html)
-   Invia i dati al Google Sheet tramite la Web App di Apps Script
-   indicata nell'attributo data-endpoint del form. */
+   Invia i dati a Netlify Forms (modulo "avvisami"). */
 
 (function(){
 
@@ -31,21 +30,24 @@ form.addEventListener("submit", async (e)=>{
   if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ show("Please enter a valid email.", false); return; }
   if(!data.get("consenso")){ show("Please accept the privacy policy.", false); return; }
 
-  const endpoint = form.dataset.endpoint;
-  if(!endpoint){ show("Sign-ups open very soon. Follow us on Instagram in the meantime!", false); return; }
-
   const body = new URLSearchParams();
+  body.set("form-name", "avvisami");
   body.set("nome", nome);
   body.set("email", email);
   body.set("whatsapp", (data.get("whatsapp") || "").trim());
   body.set("consenso", "si");
-  body.set("pagina", location.pathname);
+  body.set("website", "");
 
   btn.disabled = true;
   show("Sending...", true);
 
   try{
-    await fetch(endpoint, { method:"POST", mode:"no-cors", body });
+    const res = await fetch("/", {
+      method:"POST",
+      headers:{ "Content-Type":"application/x-www-form-urlencoded" },
+      body:body.toString()
+    });
+    if(!res.ok) throw new Error(res.status);
     form.reset();
     show("You're on the list! We'll let you know first.", true);
   }catch(err){
