@@ -1,0 +1,1047 @@
+/* ==========================================
+   SUNNY PEOPLE
+   STYLE.CSS
+   HOME PAGE
+========================================== */
+
+
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+html{
+    scroll-behavior:smooth;
+}
+
+
+body{
+
+    font-family:'Poppins', sans-serif;
+
+    background:#FFF8EF;
+
+    color:#202020;
+
+    overflow-x:hidden;
+
+}
+
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+
+a{
+
+    text-decoration:none;
+
+}
+
+
+/* header, nav e menu:  css/site-chrome.css  */
+
+
+/* MOBILE MENU */
+
+
+/* ==========================================
+   HERO
+========================================== */
+
+
+.hero{
+
+    min-height:100vh;
+
+    padding-top:125px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+
+
+    background:
+
+    linear-gradient(
+        rgba(0,0,0,.45),
+        rgba(0,0,0,.45)
+    ),
+
+    url("../images/hero.jpg");
+
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+
+.hero-content{
+
+    max-width:1000px;
+
+    animation:fadeUp 1s ease;
+
+}
+
+
+.hero h1{
+
+    font-size:90px;
+
+    line-height:.95;
+
+    font-weight:900;
+
+    letter-spacing:-4px;
+
+    margin-bottom:30px;
+
+}
+
+
+.hero p{
+
+    font-size:28px;
+
+    margin-bottom:40px;
+
+}
+
+
+.btn{
+
+    display:inline-block;
+
+    padding:18px 45px;
+
+    border-radius:50px;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #F5A300,
+        #FFC63D
+    );
+
+    color:white;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    transition:.3s ease;
+
+}
+
+
+.btn:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+.scroll-down{
+
+    margin-top:45px;
+
+    font-size:40px;
+
+    animation:bounce 2s infinite;
+
+}
+
+
+/* ==========================================
+   ABOUT
+========================================== */
+
+
+.about{
+
+    padding:120px 8%;
+
+}
+
+
+.about-container{
+
+    max-width:1350px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    align-items:center;
+
+    gap:80px;
+
+}
+
+
+.subtitle{
+
+    color:#F5A300;
+
+    font-size:15px;
+
+    font-weight:800;
+
+    letter-spacing:4px;
+
+}
+
+
+.about h2{
+
+    margin-top:20px;
+
+    margin-bottom:30px;
+
+    font-size:55px;
+
+    line-height:1.05;
+
+    letter-spacing:-2px;
+
+}
+
+
+.about p{
+
+    color:#666;
+
+    font-size:19px;
+
+    line-height:1.8;
+
+}
+
+
+.about-image img{
+
+    width:100%;
+
+    max-width:580px;
+
+    aspect-ratio:4/5;
+
+    object-fit:cover;
+
+    border-radius:30px;
+
+    box-shadow:
+
+    0 25px 60px rgba(0,0,0,.13);
+
+}
+
+
+/* ==========================================
+   EVENTS
+========================================== */
+
+
+.events{
+
+    background:#202020;
+
+    color:white;
+
+    padding:140px 10%;
+
+}
+
+
+.events-header{
+
+    max-width:1400px;
+
+    margin:0 auto 70px;
+
+}
+
+
+.events-header .subtitle{
+
+    color:#F5A300;
+
+}
+
+
+.events h2{
+
+    font-size:75px;
+
+    line-height:1;
+
+    margin-top:20px;
+
+    margin-bottom:20px;
+
+    letter-spacing:-3px;
+
+}
+
+
+.events-header p{
+
+    font-size:20px;
+
+    color:#aaa;
+
+}
+
+
+/* EVENT CARD */
+
+
+.event-card{
+
+    max-width:1250px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    background:#FFF8EF;
+
+    color:#202020;
+
+    border-radius:35px;
+
+    overflow:hidden;
+
+    box-shadow:
+
+    0 30px 80px rgba(0,0,0,.35);
+
+}
+
+
+/* POSTER */
+
+
+.event-poster{
+
+    min-height:700px;
+
+}
+
+
+.event-poster img{
+
+    width:100%;
+
+    height:100%;
+
+    min-height:700px;
+
+    object-fit:cover;
+
+}
+
+
+/* INFO */
+
+
+.event-info{
+
+    padding:70px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+
+.event-label{
+
+    color:#F5A300;
+
+    font-size:13px;
+
+    font-weight:800;
+
+    letter-spacing:4px;
+
+    margin-bottom:25px;
+
+}
+
+
+.event-info h3{
+
+    font-size:58px;
+
+    line-height:.95;
+
+    letter-spacing:-3px;
+
+    margin-bottom:30px;
+
+}
+
+
+.event-info p{
+
+    color:#666;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    margin-bottom:45px;
+
+}
+
+
+/* DETAILS */
+
+
+.event-details{
+
+    display:flex;
+
+    gap:60px;
+
+    margin-bottom:50px;
+
+}
+
+
+.event-details div{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+
+.event-details span{
+
+    color:#999;
+
+    font-size:11px;
+
+    font-weight:800;
+
+    letter-spacing:3px;
+
+}
+
+
+.event-details strong{
+
+    color:#202020;
+
+    font-size:22px;
+
+}
+
+
+/* BUTTON */
+
+
+.event-button{
+
+    width:max-content;
+
+    padding:17px 32px;
+
+    background:#F5A300;
+
+    color:white;
+
+    border-radius:50px;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    transition:.3s ease;
+
+}
+
+
+.event-button:hover{
+
+    background:#FFC63D;
+
+    transform:translateY(-5px);
+
+}
+
+/* ==========================================
+   GALLERY
+========================================== */
+
+
+.gallery{
+
+    padding:140px 0;
+
+    background:#FFF8EF;
+
+    overflow:hidden;
+
+}
+
+
+.gallery-header{
+
+    max-width:1400px;
+
+    margin:0 auto 70px;
+
+    padding:0 10%;
+
+}
+
+
+.gallery h2{
+
+    font-size:75px;
+
+    line-height:1;
+
+    letter-spacing:-3px;
+
+    margin-top:20px;
+
+}
+
+
+.gallery-event{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    margin-top:35px;
+
+}
+
+
+.gallery-event h3{
+
+    font-size:30px;
+
+}
+
+
+.gallery-event span{
+
+    color:#F5A300;
+
+    font-weight:800;
+
+}
+
+
+/* CONTENITORE SCORRIMENTO */
+
+
+.gallery-scroll{
+
+    width:100%;
+
+    overflow-x:auto;
+
+    overflow-y:hidden;
+
+    cursor:grab;
+
+    scrollbar-width:none;
+
+    -ms-overflow-style:none;
+
+}
+
+
+.gallery-scroll::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+
+.gallery-scroll.active{
+
+    cursor:grabbing;
+
+}
+
+
+/* RIGA FOTO */
+
+
+.gallery-track{
+
+    display:flex;
+
+    gap:25px;
+
+    width:max-content;
+
+    padding-left:10%;
+
+    padding-right:10%;
+
+}
+
+
+.gallery-item{
+
+    width:280px;
+
+    height:420px;
+
+    flex-shrink:0;
+
+    overflow:hidden;
+
+    border-radius:25px;
+
+    transition:.5s ease;
+
+}
+
+
+.gallery-item img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.5s ease;
+
+}
+
+
+/* EFFETTO ALLARGAMENTO */
+
+
+.gallery-item:hover{
+
+    width:430px;
+
+}
+
+
+.gallery-item:hover img{
+
+    transform:scale(1.05);
+
+}
+
+
+.gallery-hint{
+
+    text-align:center;
+
+    margin-top:45px;
+
+    color:#999;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:3px;
+
+}
+
+
+/* ==========================================
+   CONTACTS
+========================================== */
+
+
+.contacts{
+
+    background:#F5A300;
+
+    color:white;
+
+    padding:140px 10%;
+
+}
+
+
+.contacts-content{
+
+    max-width:1000px;
+
+    margin:auto;
+
+}
+
+
+.contacts .subtitle{
+
+    color:white;
+
+}
+
+
+.contacts h2{
+
+    font-size:80px;
+
+    line-height:.95;
+
+    letter-spacing:-4px;
+
+    margin:25px 0 30px;
+
+}
+
+
+.contacts p{
+
+    font-size:21px;
+
+    max-width:600px;
+
+    line-height:1.7;
+
+    margin-bottom:45px;
+
+}
+
+
+.contact-links{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+
+.contact-link{
+
+    padding:15px 25px;
+
+    border:2px solid white;
+
+    border-radius:50px;
+
+    color:white;
+
+    font-weight:700;
+
+    transition:.3s ease;
+
+}
+
+
+.contact-link:hover{
+
+    background:white;
+
+    color:#F5A300;
+
+}
+
+
+/* footer:  css/site-chrome.css  */
+
+
+/* ==========================================
+   ANIMATIONS
+========================================== */
+
+
+@keyframes fadeUp{
+
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+@keyframes bounce{
+
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+
+    40%{
+
+        transform:translateY(12px);
+
+    }
+
+
+    60%{
+
+        transform:translateY(6px);
+
+    }
+
+}
+
+
+/* SCROLL REVEAL */
+
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(30px);
+
+    transition:1s ease;
+
+}
+
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+/* ==========================================
+   RESPONSIVE TABLET
+========================================== */
+
+
+@media(max-width:900px){
+
+
+    .hero h1{
+
+        font-size:65px;
+
+    }
+
+
+    .about-container{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .event-card{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .event-poster img{
+
+        min-height:auto;
+
+    }
+
+
+    .event-info{
+
+        padding:40px;
+
+    }
+
+
+    .gallery-item{
+
+        width:240px;
+
+        height:360px;
+
+    }
+
+
+    .gallery-item:hover{
+
+        width:320px;
+
+    }
+
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+
+@media(max-width:600px){
+
+
+    .hero h1{
+
+        font-size:48px;
+
+    }
+
+
+    .hero p{
+
+        font-size:20px;
+
+    }
+
+
+    .about{
+
+        padding:90px 8%;
+
+    }
+
+
+    .about h2{
+
+        font-size:38px;
+
+    }
+
+
+    .events{
+
+        padding:90px 8%;
+
+    }
+
+
+    .events h2{
+
+        font-size:50px;
+
+    }
+
+
+    .event-info h3{
+
+        font-size:38px;
+
+    }
+
+
+    .event-details{
+
+        flex-direction:column;
+
+        gap:20px;
+
+    }
+
+
+    .gallery h2{
+
+        font-size:45px;
+
+    }
+
+
+    .gallery-header{
+
+        padding:0 8%;
+
+    }
+
+
+    .gallery-track{
+
+        padding-left:8%;
+
+    }
+
+
+    .gallery-item{
+
+        width:220px;
+
+        height:330px;
+
+    }
+
+
+    .gallery-item:hover{
+
+        width:260px;
+
+    }
+
+
+    .contacts{
+
+        padding:90px 8%;
+
+    }
+
+
+    .contacts h2{
+
+        font-size:50px;
+
+    }
+
+
+}

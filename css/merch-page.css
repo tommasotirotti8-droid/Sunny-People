@@ -1,0 +1,839 @@
+/* ==========================================
+   SUNNY PEOPLE
+   MERCH PAGE CSS
+========================================== */
+
+
+/* RESET */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#FFF8EF;
+
+    color:#202020;
+
+    overflow-x:hidden;
+
+}
+
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+
+a{
+
+    text-decoration:none;
+
+}
+
+
+/* header, nav e menu:  css/site-chrome.css  */
+
+
+/* ==========================================
+   GENERAL
+========================================== */
+
+
+.subtitle{
+
+    color:#F5A300;
+
+    font-size:14px;
+
+    font-weight:800;
+
+    letter-spacing:4px;
+
+}
+
+
+/* ==========================================
+   HERO
+========================================== */
+
+
+.merch-hero{
+
+    min-height:100vh;
+
+    padding:170px 8% 100px;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    align-items:center;
+
+    gap:80px;
+
+}
+
+
+.hero-content h1{
+
+    font-size:110px;
+
+    line-height:.85;
+
+    letter-spacing:-6px;
+
+    font-weight:900;
+
+    margin:25px 0;
+
+}
+
+
+.hero-content p{
+
+    font-size:25px;
+
+    color:#666;
+
+    line-height:1.5;
+
+}
+
+
+.drop-tag{
+
+    display:inline-flex;
+
+    flex-direction:column;
+
+    margin:35px 0;
+
+    font-weight:900;
+
+    font-size:20px;
+
+}
+
+
+.drop-tag span{
+
+    color:#F5A300;
+
+    font-size:13px;
+
+    letter-spacing:3px;
+
+}
+
+
+.hero-button{
+
+    display:inline-block;
+
+    padding:17px 35px;
+
+    border-radius:50px;
+
+    background:#F5A300;
+
+    color:white;
+
+    font-weight:700;
+
+    transition:.3s ease;
+
+}
+
+
+.hero-button:hover{
+
+    background:#FFC63D;
+
+    transform:translateY(-5px);
+
+}
+
+
+/* HERO IMAGE */
+
+
+.hero-image{
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+
+.hero-image img{
+
+    /* su telefono la colonna è larga quanto lo schermo: senza il 100%
+       la maglietta veniva tagliata sul bordo destro */
+    max-width:min(600px,100%);
+
+    animation:float 4s infinite ease-in-out;
+
+    filter:drop-shadow(0 30px 40px rgba(0,0,0,.18));
+
+}
+
+
+@keyframes float{
+
+
+    0%,
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+
+    50%{
+
+        transform:translateY(-15px);
+
+    }
+
+}
+
+
+/* ==========================================
+   DROP
+========================================== */
+
+
+.drop{
+
+    padding:120px 8%;
+
+}
+
+
+.drop-header{
+
+    text-align:center;
+
+    margin-bottom:80px;
+
+}
+
+
+.drop-header h2{
+
+    font-size:90px;
+
+    letter-spacing:-5px;
+
+    margin:20px 0;
+
+}
+
+
+.drop-header h2 span{
+
+    color:#F5A300;
+
+}
+
+
+.drop-header p{
+
+    color:#666;
+
+    font-size:20px;
+
+}
+
+
+/* PRODUCTS */
+
+
+.products-container{
+
+    max-width:1400px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:40px;
+
+}
+
+
+.product{
+
+    background:#202020;
+
+    color:white;
+
+    border-radius:35px;
+
+    overflow:hidden;
+
+    padding:35px;
+
+    position:relative;
+
+    transition:.4s ease;
+
+}
+
+
+.product:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+.product-light{
+
+    background:#F1E8DA;
+
+    color:#202020;
+
+}
+
+
+.product-number{
+
+    position:absolute;
+
+    top:30px;
+
+    left:35px;
+
+    font-size:14px;
+
+    font-weight:800;
+
+    letter-spacing:3px;
+
+    color:#F5A300;
+
+}
+
+
+.product-image{
+
+    height:500px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+
+.product-image img{
+
+    max-height:450px;
+
+    transition:.5s ease;
+
+}
+
+
+/* 3D EFFECT */
+
+
+/* Shirt faces inside a .flip-card must never get their own 3D transform:
+   it paints the face that is turned away on top of the back, so hovering
+   ends up showing the front again instead of the back. */
+.product:hover .product-image:not(.flip-card) img{
+
+    transform:
+
+    scale(1.08)
+
+    rotateY(-8deg)
+
+    translateY(-10px);
+
+}
+
+
+.product-info{
+
+    padding:25px 10px;
+
+}
+
+
+.product-label{
+
+    color:#F5A300;
+
+    font-size:13px;
+
+    font-weight:800;
+
+    letter-spacing:3px;
+
+}
+
+
+.product-info h3{
+
+    font-size:45px;
+
+    line-height:1;
+
+    letter-spacing:-2px;
+
+    margin:20px 0;
+
+}
+
+
+.product-info p{
+
+    color:#aaa;
+
+    line-height:1.7;
+
+    font-size:17px;
+
+}
+
+
+.product-light .product-info p{
+
+    color:#666;
+
+}
+
+
+.color-select{
+
+    margin:25px 0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:5px;
+
+}
+
+
+.color-select span{
+
+    font-size:11px;
+
+    letter-spacing:3px;
+
+    color:#999;
+
+}
+
+
+.color-select strong{
+
+    font-size:15px;
+
+}
+
+
+.coming-soon{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    padding:10px 20px;
+
+    border-radius:50px;
+
+    background:#F5A300;
+
+    color:white;
+
+    font-size:12px;
+
+    font-weight:800;
+
+    letter-spacing:2px;
+
+}
+
+
+/* ==========================================
+   LIFESTYLE
+========================================== */
+
+
+.lifestyle{
+
+    background:#202020;
+
+    color:white;
+
+    padding:140px 10%;
+
+}
+
+
+.lifestyle h2{
+
+    font-size:90px;
+
+    line-height:.9;
+
+    letter-spacing:-5px;
+
+    margin:25px 0;
+
+}
+
+
+.lifestyle p{
+
+    max-width:650px;
+
+    color:#aaa;
+
+    font-size:20px;
+
+    line-height:1.8;
+
+}
+
+
+.lifestyle-grid{
+
+    margin-top:80px;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+}
+
+
+.lifestyle-grid div{
+
+    border:1px solid rgba(255,255,255,.15);
+
+    padding:35px;
+
+    border-radius:25px;
+
+}
+
+
+.lifestyle-grid h3{
+
+    font-size:25px;
+
+    margin-bottom:15px;
+
+}
+
+
+/* ==========================================
+   FINAL
+========================================== */
+
+
+.merch-final{
+
+    background:#F5A300;
+
+    color:white;
+
+    padding:140px 10%;
+
+    text-align:center;
+
+}
+
+
+.merch-final h2{
+
+    font-size:90px;
+
+    line-height:.9;
+
+    letter-spacing:-5px;
+
+}
+
+
+.merch-final p{
+
+    font-size:20px;
+
+    margin:30px 0 40px;
+
+}
+
+
+.merch-final a{
+
+    display:inline-block;
+
+    padding:17px 35px;
+
+    border:2px solid white;
+
+    border-radius:50px;
+
+    color:white;
+
+    font-weight:700;
+
+}
+
+
+.merch-final a:hover{
+
+    background:white;
+
+    color:#F5A300;
+
+}
+
+
+/* footer:  css/site-chrome.css  */
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+
+@media(max-width:900px){
+
+
+    .merch-hero{
+
+        /* minmax(0,1fr): la colonna non si allarga oltre lo schermo
+           a causa della larghezza minima dell'immagine */
+        grid-template-columns:minmax(0,1fr);
+
+        text-align:center;
+
+        padding-top:150px;
+
+    }
+
+
+    .hero-content h1{
+
+        font-size:70px;
+
+    }
+
+
+    .products-container{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .lifestyle-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+}
+
+
+@media(max-width:600px){
+
+
+    .hero-content h1{
+
+        font-size:50px;
+
+    }
+
+
+    .drop-header h2{
+
+        font-size:55px;
+
+    }
+
+
+    .product-info h3{
+
+        font-size:35px;
+
+    }
+
+
+    .lifestyle h2{
+
+        font-size:50px;
+
+    }
+
+
+    .merch-final h2{
+
+        font-size:50px;
+
+    }
+
+
+}
+
+/* ==========================================
+   FLIP SHIRT CARD
+   Il retro si vede al passaggio del mouse (desktop),
+   al click / tap, oppure con Enter o Spazio da tastiera.
+========================================== */
+
+
+.flip-card{
+
+    perspective:1000px;
+
+    cursor:pointer;
+
+    -webkit-tap-highlight-color:transparent;
+
+}
+
+
+.flip-inner{
+
+    width:100%;
+
+    height:500px;
+
+    position:relative;
+
+    transition:transform .8s ease;
+
+    transform-style:preserve-3d;
+
+}
+
+
+.shirt-front,
+.shirt-back{
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    backface-visibility:hidden;
+
+    -webkit-backface-visibility:hidden;
+
+    /* scambia la faccia visibile a metà giro, così il retro si vede
+       anche nei browser che appiattiscono il contesto 3D */
+    transition:opacity 0s linear .4s;
+
+}
+
+
+.shirt-front img,
+.shirt-back img{
+
+    max-height:450px;
+
+}
+
+
+.shirt-back{
+
+    transform:rotateY(180deg);
+
+    opacity:0;
+
+}
+
+
+/* --- stato girato: click, tap, tastiera --- */
+
+.flip-card.is-flipped .flip-inner{
+
+    transform:rotateY(180deg) scale(1.05);
+
+}
+
+
+.flip-card.is-flipped .shirt-front{
+
+    opacity:0;
+
+}
+
+
+.flip-card.is-flipped .shirt-back{
+
+    opacity:1;
+
+}
+
+
+/* --- solo dispositivi con mouse: il retro appare al passaggio --- */
+
+@media(hover:hover) and (pointer:fine){
+
+    .flip-card:hover .flip-inner{
+
+        transform:rotateY(180deg) scale(1.05);
+
+    }
+
+
+    .flip-card:hover .shirt-front{
+
+        opacity:0;
+
+    }
+
+
+    .flip-card:hover .shirt-back{
+
+        opacity:1;
+
+    }
+
+}
