@@ -634,7 +634,7 @@ alt="Dom Vescovio 22 maggio 2026"
 
 <div class="gallery-hint">
 
-DRAG TO EXPLORE →
+<span class="hint-mouse">DRAG TO EXPLORE →</span><span class="hint-touch">SWIPE · TAP TO ZOOM</span>
 
 </div>
 
@@ -859,6 +859,9 @@ slider.addEventListener(
 "mousedown",
 (e)=>{
 
+if(e.button!==0) return;
+
+
 
 isDown=true;
 
@@ -944,47 +947,37 @@ scrollLeft-walk;
 
 
 
-/* TOUCH */
+/* TOUCH: lo scorrimento è quello nativo del telefono (fluido, con inerzia).
+   Toccando una foto si allarga; toccandola di nuovo o toccandone
+   un'altra torna normale. */
 
+if(window.matchMedia("(hover:none), (pointer:coarse)").matches){
 
-slider.addEventListener(
-"touchstart",
-(e)=>{
+const items = slider.querySelectorAll(".gallery-item");
 
+items.forEach(item=>{
 
-startX =
-e.touches[0].pageX;
+item.addEventListener("click", ()=>{
 
+const wasOpen = item.classList.contains("open");
 
-scrollLeft =
-slider.scrollLeft;
+items.forEach(i=>i.classList.remove("open"));
 
+if(!wasOpen){
 
-});
+item.classList.add("open");
 
+setTimeout(()=>{
+item.scrollIntoView({behavior:"smooth", block:"nearest", inline:"start"});
+}, 460);
 
-
-slider.addEventListener(
-"touchmove",
-(e)=>{
-
-
-const x =
-e.touches[0].pageX;
-
-
-
-const walk =
-(x-startX)*2;
-
-
-
-slider.scrollLeft =
-scrollLeft-walk;
-
+}
 
 });
 
+});
+
+}
 
 
 </script>
