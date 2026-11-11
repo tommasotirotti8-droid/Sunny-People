@@ -46,7 +46,7 @@ ROOT = Path(__file__).resolve().parent.parent
 
 # TODO: metti qui il tuo dominio definitivo (senza slash finale).
 # Da questo valore dipendono canonical, Open Graph, robots.txt e sitemap.
-DOMAIN = "https://sunnypeople.events"
+DOMAIN = "https://www.sunnypeopleevents.com"
 
 SITE_NAME = "Sunny People"
 SITE_TAGLINE = "Where vibes meet people."
@@ -271,7 +271,7 @@ def structured_data(lang, path, title, noindex=False, extra=None):
     }
 
     # Le pagine interne hanno in più WebPage + breadcrumb: aiuta Google a
-    # mostrare "sunnypeople.events › Merch" al posto dell'URL nudo.
+    # mostrare "sunnypeopleevents.com › Merch" al posto dell'URL nudo.
     if path != "/" and not noindex:
         name = title.split("|")[-1].strip()
         data["@graph"].append(
