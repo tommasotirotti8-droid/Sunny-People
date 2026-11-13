@@ -75,7 +75,7 @@ document.querySelectorAll("form.collab-form").forEach((form)=>{
       form.classList.add("sent");
       show(OK_TEXT[form.getAttribute("name")] || "Inviato, grazie!", true);
     }catch(err){
-      show("Qualcosa è andato storto. Riprova tra poco o scrivici a sunnypeopleevents@gmail.com.", false);
+      show("Qualcosa è andato storto. Riprova tra poco o scrivici a info@sunnypeopleevents.com.", false);
     }finally{
       btn.disabled = false;
     }

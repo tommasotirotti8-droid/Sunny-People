@@ -50,7 +50,7 @@ DOMAIN = "https://www.sunnypeopleevents.com"
 
 SITE_NAME = "Sunny People"
 SITE_TAGLINE = "Where vibes meet people."
-CONTACT_EMAIL = "sunnypeopleevents@gmail.com"
+CONTACT_EMAIL = "info@sunnypeopleevents.com"
 
 SOCIAL_LINKS = [
     "https://www.instagram.com/sunnypeople.events/",
